@@ -10,15 +10,16 @@ on_switch = Button(13)
 
 
 def light_seq():
-    red.on()
-    sleep(1)
-    red.off()
-    amber.on()
-    sleep(2)
-    amber.off()
-    green.on()
-    sleep(1)
-    green.off()
+    while on_switch.when_pressed:
+        red.on()
+        sleep(1)
+        red.off()
+        amber.on()
+        sleep(2)
+        amber.off()
+        green.on()
+        sleep(1)
+        green.off()
 
 
 on_switch.when_pressed = light_seq
