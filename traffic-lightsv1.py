@@ -7,11 +7,12 @@ green = LED(17)
 
 while True:
     red.on()
-    sleep(1)
+    sleep(10)
     red.off()
     amber.on()
-    sleep(1)
+    sleep(3)
     amber.off()
     green.on()
-    sleep(1)
+    sleep(10)
     green.off()
+
