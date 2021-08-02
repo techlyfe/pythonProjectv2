@@ -21,7 +21,7 @@ def light_seq():
             green.on()
             sleep(1)
             green.off()
-        if on_switch.released:
+        if on_switch.when_released:
             red.off()
             amber.off()
             green.off()
