@@ -9,7 +9,7 @@ on_switch = Button(13)
 
 
 while True:
-    if button.is_pressed:
+    if Button.is_pressed:
         red.on()
         sleep(1)
         red.off()
