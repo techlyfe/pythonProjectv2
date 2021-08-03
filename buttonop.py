@@ -22,7 +22,7 @@ def light_seq():
         led3.off()
     else:
 
-        while True:
+        while not lamps_on:
             led1.on()
             sleep(interval)
             led1.off()
