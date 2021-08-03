@@ -4,30 +4,35 @@ from signal import pause
 from time import sleep
 from gpiozero import LED, Button
 
-blink_on = False
+lamps_on = False
 interval = 0.5
 
 button = Button(13)
 led1 = LED(22)
 led2 = LED(27)
+led3 = LED(17)
 
 
-def go_blink():
-    global blink_on
+def light_seq():
+    global lamps_on
 
-    if blink_on:
+    if lamps_on:
         led1.off()
         led2.off()
+        led3.off()
     else:
-        led1.blink(interval, interval)
+        led1.on()
         sleep(interval)
-        led2.blink(interval, interval)
+        led2.on()
+        sleep(interval)
+        led3.on()
+        sleep(interval)
 
-    blink_on = not blink_on
+    lamps_on = not lamps_on
 
 
 try:
-    button.when_pressed = go_blink
+    button.when_pressed = light_seq
     pause()
 
 except KeyboardInterrupt:
@@ -36,3 +41,4 @@ except KeyboardInterrupt:
 finally:
     led1.close()
     led2.close()
+    led3.close()
