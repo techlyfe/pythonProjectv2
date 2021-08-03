@@ -9,7 +9,7 @@ interval = 0.5
 
 button = Button(13)
 led1 = LED(22)
-led2 = LED(17)
+led2 = LED(27)
 
 
 def go_blink():
