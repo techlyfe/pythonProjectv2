@@ -23,10 +23,13 @@ def light_seq():
     else:
         led1.on()
         sleep(interval)
+        led1.off()
         led2.on()
         sleep(interval)
+        led2.off()
         led3.on()
         sleep(interval)
+        led3.off()
 
     lamps_on = not lamps_on
 
