@@ -1,5 +1,4 @@
-from gpiozero import LED
-from gpiozero import Button
+from gpiozero import LED, Button
 from time import sleep
 from signal import pause
 
@@ -10,22 +9,21 @@ on_switch = Button(13)
 
 
 def light_seq():
-    while True:
-        red.on()
-        sleep(1)
-        red.off()
-        amber.on()
-        sleep(2)
-        amber.off()
-        green.on()
-        sleep(1)
-        green.off()
+    red.on()
+    sleep(1)
+    red.off()
+    amber.on()
+    sleep(2)
+    amber.off()
+    green.on()
+    sleep(1)
+    green.off()
 
 
 def stop_seq():
-        red.off()
-        amber.off()
-        green.off()
+    red.off()
+    amber.off()
+    green.off()
 
 
 on_switch.when_pressed = light_seq
