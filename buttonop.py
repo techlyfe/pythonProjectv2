@@ -7,9 +7,9 @@ from gpiozero import LED, Button
 blink_on = False
 interval = 0.5
 
-button = Button(21)
-led1 = LED(26)
-led2 = LED(19)
+button = Button(13)
+led1 = LED(22)
+led2 = LED(17)
 
 
 def go_blink():
